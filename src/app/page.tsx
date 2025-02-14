@@ -1,9 +1,11 @@
-import { PricingCard } from "@/components/PricingCard";
+import { PricingCards } from "@/components/PricingCards";
+import PricingCardsSkeleton from "@/components/PricingCards/PricingCardsSkeleton";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="container mx-auto relative">
+    <div className="container mx-auto relative pb-8">
       <ThemeToggle />
       <main>
         <div className="text-center mt-18">
@@ -18,67 +20,11 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col mt-[60px] lg:mt-[84px] lg:flex-row">
-          {PP.map((pricing) => (
-            <PricingCard key={pricing.title} {...pricing} />
-          ))}
+          <Suspense fallback={<PricingCardsSkeleton />}>
+            <PricingCards />
+          </Suspense>
         </div>
       </main>
     </div>
   );
 }
-
-const PP = [
-  {
-    title: "Freebie",
-    description:
-      "Ideal for individuals who need quick access to basic features.",
-    price: "0",
-    supportedFeatures: [
-      "20,000+ of PNG & SVG graphics",
-      "Access to 100 million stock images",
-    ],
-    unsupportedFeatures: [
-      "Upload custom icons and fonts",
-      "Unlimited Sharing",
-      "Upload graphics & video in up to 4k",
-      "Unlimited Projects",
-      "Instant Access to our design system",
-      "Create teams to collaborate on designs",
-    ],
-  },
-  {
-    primary: true,
-    title: "Professional",
-    description:
-      "Ideal for individuals who who need advanced features and tools for client work.",
-    price: "25",
-    supportedFeatures: [
-      "20,000+ of PNG & SVG graphics",
-      "Access to 100 million stock images",
-      "Upload custom icons and fonts",
-      "Unlimited Sharing",
-      "Upload graphics & video in up to 4k",
-      "Unlimited Projects",
-    ],
-    unsupportedFeatures: [
-      "Instant Access to our design system",
-      "Create teams to collaborate on designs",
-    ],
-  },
-  {
-    title: "Enterprise",
-    description:
-      "Ideal for businesses who need personalized services and security for large teams. ",
-    price: "100",
-    supportedFeatures: [
-      "20,000+ of PNG & SVG graphics",
-      "Access to 100 million stock images",
-      "Upload custom icons and fonts",
-      "Unlimited Sharing",
-      "Upload graphics & video in up to 4k",
-      "Unlimited Projects",
-      "Instant Access to our design system",
-      "Create teams to collaborate on designs",
-    ],
-  },
-];
