@@ -10,7 +10,7 @@ import {
 import { Button } from "../ui/button";
 import { Check, X } from "lucide-react";
 
-interface PropsType {
+export interface PricingCardProps {
   primary?: boolean;
   title: string;
   description: string;
@@ -26,7 +26,7 @@ const PricingCard = ({
   price,
   supportedFeatures,
   unsupportedFeatures,
-}: PropsType) => {
+}: PricingCardProps) => {
   return (
     <Card
       className={cn(
