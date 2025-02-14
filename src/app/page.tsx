@@ -1,8 +1,10 @@
 import { PricingCard } from "@/components/PricingCard";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto relative">
+      <ThemeToggle />
       <main>
         <div className="text-center mt-18">
           <h1>
