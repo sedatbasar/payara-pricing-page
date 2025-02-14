@@ -31,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} font-satoshi antialiased`}>
+      <body
+        className={`${satoshi.variable} font-satoshi antialiased bg-violet-50`}
+      >
         {children}
       </body>
     </html>
