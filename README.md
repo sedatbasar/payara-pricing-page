@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Payara Pricing Page
 
-## Getting Started
+A modern, responsive pricing page built with **Next.js**, **TypeScript**, and **TailwindCSS**, designed to be highly customizable and visually appealing.
 
-First, run the development server:
+![GitHub last commit](https://img.shields.io/github/last-commit/sedatbasar/payara-pricing-page)
+![Vercel Deployment](https://vercelbadge.vercel.app/api/sedatbasar/payara-pricing-page)
+![GitHub Pages](https://img.shields.io/github/deployments/sedatbasar/payara-pricing-page/github-pages)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+- **Production Deployment (Vercel)**: [payara-pricing-page.vercel.app](https://payara-pricing-page.vercel.app/)
+- **Storybook Deployment (GitHub Pages)**: [GitHub Pages Storybook](https://sedatbasar.github.io/payara-pricing-page)
+
+---
+
+## 📌 **Tech Stack**
+
+The project utilizes the following modern technologies:
+
+- **[Next.js](https://nextjs.org/)** – A React framework for server-side rendering, static site generation, and API routes.
+- **[TypeScript](https://www.typescriptlang.org/)** – Enhances JavaScript with static typing.
+- **[TailwindCSS](https://tailwindcss.com/)** – A utility-first CSS framework for building responsive designs.
+- **[Shadcn](https://ui.shadcn.com/)** – A modern component library based on TailwindCSS.
+
+---
+
+## ⚡ **Features**
+
+- 📄 **Dynamic Pricing Component**: Switch between **monthly and yearly billing** seamlessly.
+- 🎨 **Fully Responsive**: Optimized for **desktop, tablet, and mobile** devices.
+- 🔥 **Storybook Integration**: UI components are documented and tested in **Storybook**.
+- ✅ **Vitest Unit Testing**: Ensures the correctness of core functionality.
+- 🎭 **Light & Dark Mode Support**: Fully supports **light and dark themes**.
+- 🚀 **Automated Deployments**:
+  - **Vercel** deploys the **main application** on pushes to `main`.
+  - **GitHub Pages** deploys the **Storybook** on pushes to `main`.
+
+---
+
+## 📂 **Project Structure**
+```
+/.github 
+  ├── workflows          # Github workflows
+/.storybook              # Storybook configuration
+/src
+  ├── components/        # Reusable UI components
+  ├── context/           # Global state management (Billing Context)
+  ├── app/               # Next.js App Router
+  ├── stories/           # Storybook stories
+  ├── fonts/             # Local fonts
+  ├── utils/             # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 **Setup & Development**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/sedatbasar/payara-pricing-page.git
+cd payara-pricing-page
+```
 
-## Learn More
+### **2️⃣ Install Dependencies**
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### **3️⃣ Start Development Server**
+```bash
+npm run dev
+```
+- Runs the Next.js app at **`http://localhost:3000`**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **4️⃣ Run Tests**
+```bash
+npm run test
+```
+- Runs all **unit tests** using **Vitest**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **5️⃣ Run Storybook**
+```bash
+npm run storybook
+```
+- Starts Storybook UI at **`http://localhost:6006`**.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 **Deployment Workflow**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ **Automatic Deployments**
+| **Environment** | **Deployed On** | **Live URL** |
+|---------------|---------------|-------------|
+| **Production (Vercel)** | Pushes to `main` | [payara-pricing-page.vercel.app](https://payara-pricing-page.vercel.app/) |
+| **Storybook (GitHub Pages)** | Pushes to `main` | [GitHub Pages Storybook](https://sedatbasar.github.io/payara-pricing-page) |
+
+### 📌 **How It Works**
+- **Vercel Deployment**: Every push to `main` triggers an automatic deployment to [Vercel](https://vercel.com/).
+- **Storybook Deployment**: GitHub Actions deploys the latest **Storybook build** to GitHub Pages.
+
+---
+
+## 📌 **Project Management**
+
+All issues and tickets were tracked using **GitHub Projects**.
+
+- 🔗 **Project Board**: [GitHub Projects](https://github.com/users/sedatbasar/projects/1/views/1)
+
+---
