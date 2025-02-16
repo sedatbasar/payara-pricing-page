@@ -10,7 +10,8 @@ export const Monthly: StoryObj<typeof PricingCard> = {
   args: {
     primary: false,
     title: "Basic",
-    description: "Ideal for individuals who need quick access to basic features.",
+    description:
+      "Ideal for individuals who need quick access to basic features.",
     monthlyPrice: "10",
     yearlyPrice: "30",
     supportedFeatures: [
@@ -22,5 +23,5 @@ export const Monthly: StoryObj<typeof PricingCard> = {
       "Unlimited Sharing",
       "Upload graphics & video",
     ],
-  }
+  },
 };
