@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.2",
@@ -48,6 +49,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "eslint-plugin-storybook": "^0.11.3",
+    "gh-pages": "^6.3.0",
     "jsdom": "^26.0.0",
     "postcss": "^8",
     "prettier": "^3.5.1",
