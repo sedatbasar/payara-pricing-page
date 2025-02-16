@@ -38,8 +38,9 @@ The project utilizes the following modern technologies:
 ---
 
 ## 📂 **Project Structure**
+
 ```
-/.github 
+/.github
   ├── workflows          # Github workflows
 /.storybook              # Storybook configuration
 /src
@@ -56,32 +57,40 @@ The project utilizes the following modern technologies:
 ## 🛠 **Setup & Development**
 
 ### **1️⃣ Clone the Repository**
+
 ```bash
 git clone https://github.com/sedatbasar/payara-pricing-page.git
 cd payara-pricing-page
 ```
 
 ### **2️⃣ Install Dependencies**
+
 ```bash
 npm install
 ```
 
 ### **3️⃣ Start Development Server**
+
 ```bash
 npm run dev
 ```
+
 - Runs the Next.js app at **`http://localhost:3000`**.
 
 ### **4️⃣ Run Tests**
+
 ```bash
 npm run test
 ```
+
 - Runs all **unit tests** using **Vitest**.
 
 ### **5️⃣ Run Storybook**
+
 ```bash
 npm run storybook
 ```
+
 - Starts Storybook UI at **`http://localhost:6006`**.
 
 ---
@@ -89,12 +98,14 @@ npm run storybook
 ## 🚀 **Deployment Workflow**
 
 ### ✅ **Automatic Deployments**
-| **Environment** | **Deployed On** | **Live URL** |
-|---------------|---------------|-------------|
-| **Production (Vercel)** | Pushes to `main` | [payara-pricing-page.vercel.app](https://payara-pricing-page.vercel.app/) |
+
+| **Environment**              | **Deployed On**  | **Live URL**                                                               |
+| ---------------------------- | ---------------- | -------------------------------------------------------------------------- |
+| **Production (Vercel)**      | Pushes to `main` | [payara-pricing-page.vercel.app](https://payara-pricing-page.vercel.app/)  |
 | **Storybook (GitHub Pages)** | Pushes to `main` | [GitHub Pages Storybook](https://sedatbasar.github.io/payara-pricing-page) |
 
 ### 📌 **How It Works**
+
 - **Vercel Deployment**: Every push to `main` triggers an automatic deployment to [Vercel](https://vercel.com/).
 - **Storybook Deployment**: GitHub Actions deploys the latest **Storybook build** to GitHub Pages.
 
