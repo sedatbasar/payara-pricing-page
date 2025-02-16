@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import {
   Card,
@@ -9,12 +11,14 @@ import {
 } from "../ui/card";
 import { Button } from "../ui/button";
 import { Check, X } from "lucide-react";
+import { useBilling } from "@/context/BillingContext";
 
 export interface PricingCardProps {
   primary?: boolean;
   title: string;
   description: string;
-  price: string;
+  monthlyPrice: string;
+  yearlyPrice: string;
   supportedFeatures: string[];
   unsupportedFeatures?: string[];
 }
@@ -23,10 +27,12 @@ const PricingCard = ({
   primary,
   title,
   description,
-  price,
+  monthlyPrice,
+  yearlyPrice,
   supportedFeatures,
   unsupportedFeatures,
 }: PricingCardProps) => {
+  const { billingType } = useBilling();
   return (
     <Card
       className={cn(
@@ -37,14 +43,18 @@ const PricingCard = ({
           "my-[30px] bg-violet-100 dark:bg-gray-700 text-violet-950 dark:text-violet-50",
       )}
     >
-      <CardHeader>
+      <CardHeader className="min-h-[6.25rem]">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex items-center">
-          <span className="text-xl">${price}</span>
-          <span className="">&nbsp;/ Month</span>
+          <span className="text-xl">
+            ${billingType === "monthly" ? monthlyPrice : yearlyPrice}
+          </span>
+          <span className="">
+            &nbsp;/ {billingType === "monthly" ? "Month" : "Year"}
+          </span>
         </div>
         <Button
           variant={primary ? "default" : "secondary"}

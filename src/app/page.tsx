@@ -1,3 +1,4 @@
+import { BillingTypeRadioGroup } from "@/components/BillingTypeRadioGroup";
 import { PricingCards } from "@/components/PricingCards";
 import PricingCardsSkeleton from "@/components/PricingCards/PricingCardsSkeleton";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -19,7 +20,8 @@ export default function Home() {
             Choose a plan that’s right for you
           </div>
         </div>
-        <div className="flex flex-col mt-[60px] lg:mt-[84px] lg:flex-row">
+        <BillingTypeRadioGroup />
+        <div className="flex flex-col lg:flex-row mt-8">
           <Suspense fallback={<PricingCardsSkeleton />}>
             <PricingCards />
           </Suspense>

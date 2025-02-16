@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { BillingProvider } from "@/context/BillingContext";
 
 export const metadata: Metadata = {
   title: "Payara Pricing Page",
@@ -41,7 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <BillingProvider>{children}</BillingProvider>
         </ThemeProvider>
       </body>
     </html>
