@@ -11,7 +11,10 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.2",
@@ -28,7 +31,15 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
     "@eslint/eslintrc": "^3",
+    "@storybook/addon-essentials": "^8.5.6",
+    "@storybook/addon-interactions": "^8.5.6",
+    "@storybook/addon-onboarding": "^8.5.6",
+    "@storybook/blocks": "^8.5.6",
+    "@storybook/nextjs": "^8.5.6",
+    "@storybook/react": "^8.5.6",
+    "@storybook/test": "^8.5.6",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "@types/node": "^20",
@@ -37,12 +48,20 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "eslint-plugin-storybook": "^0.11.3",
+    "gh-pages": "^6.3.0",
     "jsdom": "^26.0.0",
     "postcss": "^8",
     "prettier": "^3.5.1",
+    "storybook": "^8.5.6",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
