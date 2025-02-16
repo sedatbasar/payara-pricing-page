@@ -5,7 +5,8 @@ export async function GET() {
         title: "Freebie",
         description:
           "Ideal for individuals who need quick access to basic features.",
-        price: "0",
+        monthlyPrice: "0",
+        yearlyPrice: "0",
         supportedFeatures: [
           "20,000+ of PNG & SVG graphics",
           "Access to 100 million stock images",
@@ -24,7 +25,8 @@ export async function GET() {
         title: "Professional",
         description:
           "Ideal for individuals who who need advanced features and tools for client work.",
-        price: "25",
+        monthlyPrice: "25",
+        yearlyPrice: "260",
         supportedFeatures: [
           "20,000+ of PNG & SVG graphics",
           "Access to 100 million stock images",
@@ -42,7 +44,8 @@ export async function GET() {
         title: "Enterprise",
         description:
           "Ideal for businesses who need personalized services and security for large teams. ",
-        price: "100",
+        monthlyPrice: "100",
+        yearlyPrice: "1000",
         supportedFeatures: [
           "20,000+ of PNG & SVG graphics",
           "Access to 100 million stock images",
