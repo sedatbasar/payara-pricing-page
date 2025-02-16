@@ -42,18 +42,19 @@ const PricingCard = ({
         !primary &&
           "my-[30px] bg-violet-100 dark:bg-gray-700 text-violet-950 dark:text-violet-50",
       )}
+      data-testid="pricing-card"
     >
       <CardHeader className="min-h-[6.25rem]">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center">
+        <div className="flex items-center" data-testid="price">
           <span className="text-xl">
             ${billingType === "monthly" ? monthlyPrice : yearlyPrice}
           </span>
-          <span className="">
-            &nbsp;/ {billingType === "monthly" ? "Month" : "Year"}
+          <span className="ml-1">
+            / {billingType === "monthly" ? "Month" : "Year"}
           </span>
         </div>
         <Button
