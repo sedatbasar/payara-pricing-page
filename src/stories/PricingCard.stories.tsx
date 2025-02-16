@@ -9,7 +9,7 @@ export default {
 export const Monthly: StoryObj<typeof PricingCard> = {
   args: {
     primary: false,
-    title: "Basic",
+    title: "Basic Test Auto deploy",
     description:
       "Ideal for individuals who need quick access to basic features.",
     monthlyPrice: "10",
